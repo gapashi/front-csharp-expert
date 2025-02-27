@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class="container-fluid bg-info bg-gradient p-5 b-4">
+    <header class="container-fluid bg-primary bg-gradient p-5 b-4">
         <h1 class="container text-light">E-Trocas</h1>
         <h2 class="container text-light">Gerenciar trocas</h2>
     </header>
@@ -85,13 +85,13 @@
                 <div class="row mb-3">
                     <div class="col-md-4 my-2">
                         <label for="titulo" class="form-label">Título do anúncio</label>
-                        <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Ex.: Boneca Barbie" 
+                        <input type="text" id="titulo" name="titulo" class="form-control border-primary border-opacity-50" placeholder="Ex.: Boneca Barbie" 
                         minlength="8" maxlength="30" required>
                     </div>
 
                     <div class="col-md-4 my-2">
                         <label for="produtos" class="form-label">Tipo de produto</label>
-                        <select name="produtos" id="produtos" class="form-select required">
+                        <select name="produtos" id="produtos" class="form-select required border-primary border-opacity-50">
                             <option value="0" disabled selected>Selecione o item</option>
                             <option value="1">Brinquedo</option>
                             <option value="2">Vestuário</option>
@@ -102,28 +102,37 @@
 
                     <div class="col-md-4 my-2">
                         <label for="data" class="form-label">Data do cadastro</label>
-                        <input type="date" id="data" name="data" class="form-control required">
+                        <input type="date" id="data" name="data" class="form-control required border-primary border-opacity-50">
                     </div>
 
                     <div class="col-12 my-2">
                         <label for="descricao" class="form-label">Descrição</label>
-                        <textarea name="descricao" id="descricao" class="form-control required" minlength="100" maxlength="450"></textarea>
+                        <textarea name="descricao" id="descricao" class="form-control required border-primary border-opacity-50"
+                        minlength="100" maxlength="450" placeholder="Descrição do produto que deseja enviar para troca"></textarea>
                     </div>
 
                     <div class="col-12 my-2">
                         <label for="descricaoTroca" class="form-label">Gostaria de trocar por</label>
-                        <textarea name="descricaoTroca" id="descricaoTroca" class="form-control required" minlength="100" maxlength="450"></textarea>
+                        <textarea name="descricaoTroca" id="descricaoTroca" class="form-control required border-primary border-opacity-50"
+                        minlength="100" maxlength="450" placeholder="Descreva aqui o produto pelo qual gostaria de trocar"></textarea>
                     </div>
 
-                    <div>
-                        <button type="submit" class="bg-primary border-0 rounded-2 ps-3 pe-3 py-1 mt-4 text-light">Cadastrar troca -></button>
+                    <div class="my-3 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Cadastrar troca -></button>
                     </div>
                 </div>
             </form>
          </section>
 
-         <section>
+         <!-- PESQUISA DE TROCAS -->
+         <section class="border border-secondary-subtle rounded-2 p-4 my-5">
+            <h2>Buscar suas trocas</h2>
 
+            <form id="buscar" name="buscar" method="get" action="">
+                <div>
+                    <input type="search" name="txtBuscar" id="txtBuscar" placeholder="Pesquisar..." class="col-10">
+                </div>
+            </form>
          </section>
     </main>
 </body>
